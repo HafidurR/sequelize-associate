@@ -6,13 +6,13 @@ module.exports = (sequelize, DataTypes) => {
         }
     })
 
-    // Post.associate = models => {
-    //     Post.belongsTo(models.User, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     })
-    // }
+    Post.associate = models => {
+        Post.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: false
+            }
+        })
+    }
 
     return Post;
 }
